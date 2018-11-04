@@ -1,7 +1,7 @@
 <template format="4"
           revision="1"
-          name="MVVMGenerator Activity"
-          description="Creates a new MVVM classes for activity">
+          name="MVVMGenerator"
+          description="Creates a new MVVM classes for activity and fragment.">
 
     <category value="Other"/>
 
@@ -11,6 +11,12 @@
                constraints="class|unique|nonempty"
                default="MVVMFunction"
                help="The name of the functionality that requires MVVM views"/>
+
+    <parameter id="enableFragment"
+               name="Enable Fragment"
+               type="boolean"
+               default="false"
+               help="Generate files for fragment" />
 
     <globals file="globals.xml.ftl" />
     <execute file="recipe.xml.ftl" />
